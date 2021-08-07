@@ -4,7 +4,7 @@ import { Login, Register } from "./components";
 
 const AuthPage = () => {
   return (
-    <div>
+    <div className="lg:flex">
       <Switch>
         <Route path="/auth/login" component={Login} />
         <Route path="/auth/registration" component={Register} />
