@@ -52,19 +52,19 @@ export function Login() {
           <div className="cursor-pointer flex items-center">
             <Image src="/logo.png" /> Logo
           </div>
-          <div className="text-2xl text-indigo-800 tracking-wide ml-2 font-semibold">
+          <div className="text-2xl text-indigo-500 tracking-wide ml-2 font-semibold">
             Some text
           </div>
         </div>
-        <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+        <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-100 xl:px-24 xl:max-w-2xl">
           <h2
-            className="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+            className="text-center text-4xl text-indigo-500 font-display font-semibold lg:text-left xl:text-5xl
                     xl:text-bold  "
           >
             Login
           </h2>
 
-          <form className="mt-12" onSubmit={handleSubmit(onSubmit)}>
+          <form className="mt-12" onSubmit={handleSubmit(onSubmit)} autoComplete="off">
             <div className="text-sm font-bold text-gray-700 tracking-wide">
               Email
             </div>
@@ -88,7 +88,7 @@ export function Login() {
                 </div>
                 <Link
                   to="/auth/forgot-password"
-                  className="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
+                  className="text-xs font-display font-semibold text-indigo-500 hover:text-indigo-600
                                         cursor-pointer"
                 >
                   Forgot password
@@ -105,9 +105,9 @@ export function Login() {
                 {...register("password")}
                 autoComplete="off"
               />
-              <div className="flex justify-start mt-6 items-center">
-                <input type="checkbox" className="h-5 w-5" />
-                <span className="ml-2">Remmeber me</span>
+              <div className="flex justify-start mt-4 items-center">
+                <input type="checkbox" className="text-indigo-500 h-5 w-5" />
+                <span className="ml-2 text-gray-500">Remmeber me</span>
               </div>
               <p>{errors.password?.message}</p>
               <div className="mt-10">
