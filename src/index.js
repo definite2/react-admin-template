@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import store from "./store";
+import { PersistGate } from "redux-persist/integration/react";
+import store, { persistor } from "./store";
 import App from "./App";
 import "./styles/main.scss";
-import 'semantic-ui-css/semantic.min.css';
+import "semantic-ui-css/semantic.min.css";
 const { PUBLIC_URL } = process.env;
 ReactDOM.render(
   <Provider store={store}>
-    <App basename={PUBLIC_URL} />
+    <PersistGate persistor={persistor} loading={null}>
+      <App basename={PUBLIC_URL} />
+    </PersistGate>
   </Provider>,
   document.getElementById("root")
 );
