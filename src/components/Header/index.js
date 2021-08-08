@@ -7,6 +7,7 @@ import {
   Menu,
   Visibility,
 } from "semantic-ui-react";
+import { logout } from "../../store/auth/actions";
 import { setSideBarOpen } from "../../store/ui/actions";
 const menuStyle = {
   border: "none",
@@ -98,7 +99,7 @@ export const StickyHeader = () => {
                       <Dropdown.Item>List Item</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown.Item>
-                  <Dropdown.Item>List Item</Dropdown.Item>
+                  <Dropdown.Item onClick={()=>dispatch(logout())}>Logout</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Menu.Menu>
