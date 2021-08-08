@@ -7,6 +7,7 @@ const Pushable = styled(SUISidebar.Pushable)`
   margin-top: 0 !important;
   border: none !important;
 `;
+
 const Sidebar = (props) => {
   const dispatch = useDispatch();
   const handleClickMenu = () => {
@@ -28,21 +29,23 @@ const Sidebar = (props) => {
         visible={true}
         width={isSidebarOpen ? "thin" : "very thin"}
       >
-        <Menu.Item as="a" onClick={handleClickMenu} className="flex flex-row justify-end">
-         <Icon name="bars" className="self-end" />
+        <Menu.Item as="a" onClick={handleClickMenu}>
+          <Icon name="bars" />
         </Menu.Item>
 
-        <Menu.Item as="a">
-          <Icon name="home" />
-          Home
+        <Menu.Item  as="a">
+          <Icon name="home" className={`${isSidebarOpen ? "" : "mr-5"}`}  />
+          <span className={`${isSidebarOpen ? "" : "hidden"}`}>Home</span>
         </Menu.Item>
         <Menu.Item as="a">
-          <Icon name="gamepad" />
-          Games
+          <Icon name="gamepad" className={`${isSidebarOpen ? "" : "mr-5"}`}  />
+          <span className={`${isSidebarOpen ? "" : "hidden"}`}>Game</span>
         </Menu.Item>
         <Menu.Item as="a">
-          <Icon name="camera" />
-          Channels
+          <Icon name="camera" className={`${isSidebarOpen ? "" : "mr-5"}`} />
+          <span className={`${isSidebarOpen ? "" : "hidden"}`}>
+            Channels
+          </span>
         </Menu.Item>
       </SUISidebar>
       {props.children}
