@@ -1,15 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Image,
-  Message,
-  Segment,
-} from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch } from "react-redux";
 import { login } from "../../../store/auth/actions";
@@ -64,7 +56,11 @@ export function Login() {
             Login
           </h2>
 
-          <form className="mt-12" onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+          <form
+            className="mt-12"
+            onSubmit={handleSubmit(onSubmit)}
+            autoComplete="off"
+          >
             <div className="text-sm font-bold text-gray-700 tracking-wide">
               Email
             </div>
