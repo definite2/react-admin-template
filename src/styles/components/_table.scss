@@ -1,0 +1,32 @@
+.reviews-table {
+  border: 0 !important;
+  tbody tr {
+    @apply lg:h-20 text-sm cursor-pointer lg:leading-none border-b border-gray-100;
+  }
+  &.table tr.active,
+  &.table tr.active:hover {
+    background-color: rgba(245, 245, 245, 1) !important;
+  }
+  tbody tr td {
+    @apply truncate max-w-xs text-left text-gray-800 font-bold;
+  }
+  thead tr th {
+    &.sortable {
+      @apply cursor-pointer;
+    }
+    &.sortable.sorted-ascending:after {
+      content: "\f0dd";
+    }
+    &.sortable.sorted-descending:after {
+      content: "\f0de";
+    }
+    &.sortable:after {
+      font-family: "Icons";
+      margin-left: 0.3em;
+      content: "\f0dc";
+    }
+    &:not(.sorted-ascending):not(.sorted-descending):after {
+      @apply opacity-80;
+    }
+  }
+}
