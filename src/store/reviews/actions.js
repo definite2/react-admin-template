@@ -8,7 +8,6 @@ export const mockgetReviews = (queryParams) => (dispatch) => {
     .then((response) => {
       // const {data,totalPages}=response
       dispatch(reviewsActions.reviewsFetched(response));
-      dispatch()
     })
     .catch((error) => {
       error.clientMessage = "Can't get reviews from server";
