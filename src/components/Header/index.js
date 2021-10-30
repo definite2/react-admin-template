@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 const Navbar = styled(Menu)`
   background-color: #aaf255 !important;
+  height: 56px;
 `;
 export const StickyHeader = () => {
   const dispatch = useDispatch();
