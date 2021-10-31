@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Dropdown, Menu, Visibility } from "semantic-ui-react";
 import { logout } from "../../store/auth/actions";
-import styled from "styled-components";
 
-const Navbar = styled(Menu)`
-  background-color: #aaf255 !important;
-  height: 56px;
-`;
 export const StickyHeader = () => {
   const dispatch = useDispatch();
   const [menuFixed, setmenuFixed] = useState(false);
@@ -21,13 +16,13 @@ export const StickyHeader = () => {
         onBottomVisible={unStickTopMenu}
         once={false}
       >
-        <Navbar
+        <Menu
           borderless
           fixed={menuFixed ? "top" : undefined}
-          className={menuFixed ? "fixed-menu" : "default-menu"}
+          className={`bg-gray-400 h-16 rounded-none border-none ${
+            menuFixed ? "fixed-menu" : "default-menu"
+          }`}
         >
-          <Menu.Item active name="Dashboard" />
-
           <Menu.Menu position="right" className="mr-4">
             <Dropdown icon="user" text="Hi bob!" pointing className="link item">
               <Dropdown.Menu>
@@ -37,7 +32,7 @@ export const StickyHeader = () => {
               </Dropdown.Menu>
             </Dropdown>
           </Menu.Menu>
-        </Navbar>
+        </Menu>
       </Visibility>
     </>
   );

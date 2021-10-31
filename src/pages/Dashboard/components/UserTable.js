@@ -40,7 +40,7 @@ export const CustomersReviewsTable = () => {
                 <TableBodyCell align="left">{row.email}</TableBodyCell>
                 <TableBodyCell align="left">{row.registerDate}</TableBodyCell>
                 <TableBodyCell>
-                  <ActionButton className="bg-purple-400 hover:bg-purple-500 focus:bg-purple-500 p-2">
+                  <ActionButton className="bg-blue-400 hover:bg-blue-500 focus:bg-blue-500 p-2">
                     <ActionButtonIcon
                       icon={<FiEdit size={16} />}
                       iconColor="text-white"
