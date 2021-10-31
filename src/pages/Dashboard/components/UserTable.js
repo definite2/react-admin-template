@@ -22,7 +22,6 @@ export const CustomersReviewsTable = () => {
   }, [dispatch, filters]);
   const handleSort = (_, property) => {
     const isAscending = sortBy === property && sortDirection === "ascending";
-    dispatch();
   };
   return (
     <div
