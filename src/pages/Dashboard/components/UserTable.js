@@ -5,6 +5,11 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { UsersTableHead } from "./UserTableHead";
 import { mockgetReviews } from "../../../store/reviews/actions";
 import TableFilterForm from "./TableFilterForm";
+import ActionButton, {
+  ActionButtonIcon,
+} from "../../../components/FormItems/ActionButton";
+import { FiEdit } from "react-icons/fi";
+import { MdOutlineDelete } from "react-icons/md";
 export const CustomersReviewsTable = () => {
   const dispatch = useDispatch();
   const { currentState } = useSelector(
@@ -36,8 +41,18 @@ export const CustomersReviewsTable = () => {
                 <TableBodyCell align="left">{row.email}</TableBodyCell>
                 <TableBodyCell align="left">{row.registerDate}</TableBodyCell>
                 <TableBodyCell>
-                  <button>edit</button>
-                  <button>delete</button>
+                  <ActionButton className="bg-purple-400 hover:bg-purple-500 focus:bg-purple-500 p-2">
+                    <ActionButtonIcon
+                      icon={<FiEdit size={16} />}
+                      iconColor="text-white"
+                    />
+                  </ActionButton>
+                  <ActionButton className="bg-red-400 hover:bg-red-500 focus:bg-red-500 p-2">
+                    <ActionButtonIcon
+                      icon={<MdOutlineDelete size={16} />}
+                      iconColor="text-white"
+                    />
+                  </ActionButton>
                 </TableBodyCell>
               </Table.Row>
             );

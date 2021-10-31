@@ -1,7 +1,7 @@
 .reviews-table {
   border: 0 !important;
   tbody tr {
-    @apply lg:h-20 text-sm cursor-pointer lg:leading-none border-b border-gray-100;
+    @apply lg:h-20 text-sm  cursor-text lg:leading-none border-b border-gray-100;
   }
   &.table tr.active,
   &.table tr.active:hover {
