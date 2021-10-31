@@ -10,7 +10,7 @@ export const ActionButtonIcon = React.forwardRef(({ icon, iconColor }, ref) => {
 });
 const ActionButton = (props) => {
   const { className, ...rest } = props;
-  return <Button className={className} icon={<ActionButtonIcon />} {...rest} />;
+  return <Button className={className} icon {...rest} >{props.children}</Button>;
 };
 
 export default ActionButton;
