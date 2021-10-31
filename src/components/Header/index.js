@@ -31,18 +31,6 @@ export const StickyHeader = () => {
           <Menu.Menu position="right" className="mr-4">
             <Dropdown icon="user" text="Hi bob!" pointing className="link item">
               <Dropdown.Menu>
-                <Dropdown.Item>List Item</Dropdown.Item>
-                <Dropdown.Item>List Item</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Header>Header Item</Dropdown.Header>
-                <Dropdown.Item>
-                  <i className="dropdown icon" />
-                  <span className="text">Submenu</span>
-                  <Dropdown.Menu>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                    <Dropdown.Item>List Item</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown.Item>
                 <Dropdown.Item onClick={() => dispatch(logout())}>
                   Logout
                 </Dropdown.Item>
