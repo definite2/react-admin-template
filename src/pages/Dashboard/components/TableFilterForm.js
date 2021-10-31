@@ -1,25 +1,15 @@
 import React from "react";
-import { Grid,Segment } from "semantic-ui-react";
+import { Form } from "semantic-ui-react";
 const TableFilterForm = () => {
   return (
-    <form>
-      <Grid columns={4}>
-        <Grid.Row stretched>
-          <Grid.Column>
-            <Segment>1</Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment>1</Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment>1</Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment>1</Segment>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </form>
+    <Form>
+      <Form.Group>
+        <Form.Input label="Username" placeholder="" width={4} />
+        <Form.Input label="Company" placeholder="X Company" width={4} />
+        <Form.Input label="Email" placeholder="name@company.com" width={4} />
+        <Form.Input label="Register Date" placeholder="10/31/2021" width={4} />
+      </Form.Group>
+    </Form>
   );
 };
 
