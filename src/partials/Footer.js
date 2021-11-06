@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Container, Divider, Image, List } from "semantic-ui-react";
 const Footer = () => {
   return (
-    <Grid className="w-full">
+    <div className="w-full absolute bottom-0">
       <Container textAlign="center">
         <Divider section />
         <Image src="/logo.png" centered size="mini" />
@@ -21,7 +21,7 @@ const Footer = () => {
           </List.Item>
         </List>
       </Container>
-    </Grid>
+    </div>
   );
 };
 

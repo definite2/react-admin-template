@@ -29,7 +29,7 @@ export const CustomersReviewsTable = () => {
       style={{ boxShadow: "0px 2px 8px rgba(0,0,0,0.04)" }}
     >
       <TableFilterForm />
-      <Table selectable className="reviews-table">
+      <Table selectable className="reviews-table p-3">
         <UsersTableHead />
         <Table.Body>
           {data.map((row, idx) => {
@@ -40,7 +40,7 @@ export const CustomersReviewsTable = () => {
                 <TableBodyCell align="left">{row.email}</TableBodyCell>
                 <TableBodyCell align="left">{row.registerDate}</TableBodyCell>
                 <TableBodyCell>
-                  <ActionButton className="bg-blue-400 hover:bg-blue-500 focus:bg-blue-500 p-2">
+                  <ActionButton className="bg-primary-400 hover:bg-primary-500 focus:bg-primary-500 p-2">
                     <ActionButtonIcon
                       icon={<FiEdit size={16} />}
                       iconColor="text-white"

@@ -3,7 +3,7 @@ import { Icon, Menu, Sidebar as SUISidebar } from "semantic-ui-react";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
 import { setSideBarOpen } from "../../store/ui/actions";
 import Input from "../FormItems/Input";
-import { NavLink,useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 const Sidebar = (props) => {
   const dispatch = useDispatch();
   const handleClickMenu = () => {
@@ -14,7 +14,7 @@ const Sidebar = (props) => {
     shallowEqual
   );
   const { isSidebarOpen } = uistate;
-  const location = useLocation()
+  const location = useLocation();
   return (
     <SUISidebar.Pushable>
       <SUISidebar
@@ -30,6 +30,7 @@ const Sidebar = (props) => {
           className="flex justify-end items-center text-white cursor-pointer h-12"
           onClick={handleClickMenu}
         >
+          <span className={`${isSidebarOpen ? "mr-2 font-semibold text-primary-400" : "hidden"}`}>React Admin</span>
           <Icon name="bars" size="large" />
         </div>
         <hr />
@@ -45,7 +46,6 @@ const Sidebar = (props) => {
           <Icon name="wpforms" className={`${isSidebarOpen ? "" : "mr-5"}`} />
           <span className={`${isSidebarOpen ? "" : "hidden"}`}>Forms</span>
         </Menu.Item>
-        {isSidebarOpen && <Input icon="search" placeholder="Search..." />}
       </SUISidebar>
       <SUISidebar.Pusher>{props.children}</SUISidebar.Pusher>
     </SUISidebar.Pushable>

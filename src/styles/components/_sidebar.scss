@@ -1,4 +1,17 @@
-.ui.inverted.menu.sidebar{
-  @apply bg-gray-400;
+.ui.inverted.menu.sidebar {
+  @apply bg-gray-800;
 }
 
+.ui.labeled.icon.menu .item {
+  flex-direction: row !important;
+}
+.ui.vertical.menu .item {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.pushable {
+  & hr {
+    display: none;
+  }
+}

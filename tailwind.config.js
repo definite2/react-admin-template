@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
+      primary:colors.blue,
       transparent: "transparent",
       current: "currentColor",
       black: colors.black,

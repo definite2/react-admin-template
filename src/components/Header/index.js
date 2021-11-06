@@ -19,12 +19,12 @@ export const StickyHeader = () => {
         <Menu
           borderless
           fixed={menuFixed ? "top" : undefined}
-          className={`bg-gray-400 h-16 rounded-none border-none ${
+          className={`bg-gray-800 h-16 rounded-none border-none ${
             menuFixed ? "fixed-menu" : "default-menu"
           }`}
         >
           <Menu.Menu position="right" className="mr-4">
-            <Dropdown icon="user" text="Hi bob!" pointing className="link item">
+            <Dropdown icon="user" text="Hi bob!" pointing className="link item text-white">
               <Dropdown.Menu>
                 <Dropdown.Item onClick={() => dispatch(logout())}>
                   Logout

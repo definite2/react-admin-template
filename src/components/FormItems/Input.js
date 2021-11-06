@@ -27,7 +27,7 @@ const Input = React.forwardRef((props, ref) => {
           onChange={onChange}
           onBlur={onBlur}
           value={value}
-          className="w-full block border border-gray-300  text-gray-700 py-4 px-2 rounded-md leading-tight focus:outline-none focus:ring-blue-400 focus:border-blue-400 focus:ring-1"
+          className="w-full block border border-gray-300  text-gray-700 py-4 px-2 rounded-md leading-tight focus:outline-none focus:ring-primary-400 focus:border-primary-400 focus:ring-1"
         />
         {error && <span className="text-xs text-red-600">{error}</span>}
       </div>

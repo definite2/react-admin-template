@@ -1,11 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Input from "../../../components/FormItems/Input";
+import { Button } from "semantic-ui-react";
 const TableFilterForm = (props) => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className="m-3">
       <div className="flex flex-col sm:flex-row w-full mb-6 items-center justify-start">
         <div className="w-full lg:w-1/4 px-2 mr-0 sm:mr-2 pb-4 sm:pb-0">
           <Input
@@ -40,7 +41,7 @@ const TableFilterForm = (props) => {
           />
         </div>
       </div>
-      <button type="submit">submit</button>
+      <Button className="bg-primary-500 text-white ml-0 sm:ml-2 py-4 tracking-wide" type="submit">Submit</Button>
     </form>
   );
 };
