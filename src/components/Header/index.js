@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Dropdown, Menu, Visibility } from "semantic-ui-react";
-import { logout } from "../../store/auth/actions";
+import { logout } from "store/auth/actions";
 
 export const StickyHeader = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ export const StickyHeader = () => {
         <Menu
           borderless
           fixed={menuFixed ? "top" : undefined}
-          className={`bg-gray-800 h-16 rounded-none border-none ${
+          className={`bg-gray-700 h-20 rounded-none border-none ${
             menuFixed ? "fixed-menu" : "default-menu"
           }`}
         >

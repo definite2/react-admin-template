@@ -3,11 +3,11 @@ import { Table } from "semantic-ui-react";
 import { TableBodyCell, Pagination } from "../../../components/Table";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { UsersTableHead } from "./UserTableHead";
-import { mockgetReviews } from "../../../store/reviews/actions";
+import { mockgetReviews } from "store/reviews/actions";
 import TableFilterForm from "./TableFilterForm";
 import ActionButton, {
   ActionButtonIcon,
-} from "../../../components/FormItems/ActionButton";
+} from "components/FormItems/ActionButton";
 import { FiEdit } from "react-icons/fi";
 import { MdOutlineDelete } from "react-icons/md";
 export const CustomersReviewsTable = () => {

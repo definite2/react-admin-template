@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import Input from "../../../components/FormItems/Input";
+import Input from "components/FormItems/Input";
 import { Button } from "semantic-ui-react";
 const TableFilterForm = (props) => {
   const { register, handleSubmit } = useForm();

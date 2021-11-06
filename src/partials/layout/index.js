@@ -1,6 +1,6 @@
 import React from "react";
-import { StickyHeader } from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
+import { StickyHeader } from "components/Header";
+import Sidebar from "components/Sidebar";
 import Footer from "../Footer";
 
 const Layout = ({ children }) => {

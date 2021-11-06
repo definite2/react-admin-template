@@ -1,5 +1,5 @@
 import React from "react";
-import { TableHead } from "../../../components/Table";
+import { TableHead } from "components/Table";
 export const UsersTableHead = (props) => {
   const headerCells = [
     {

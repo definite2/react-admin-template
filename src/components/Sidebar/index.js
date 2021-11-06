@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon, Menu, Sidebar as SUISidebar } from "semantic-ui-react";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
-import { setSideBarOpen } from "../../store/ui/actions";
+import { setSideBarOpen } from "store/ui/actions";
 import Input from "../FormItems/Input";
 import { NavLink, useLocation } from "react-router-dom";
 const Sidebar = (props) => {
